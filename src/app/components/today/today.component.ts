@@ -2,12 +2,12 @@ import { Component, OnInit, NgModule } from '@angular/core';
 import { TodayService } from '../../services/today.service';
 
 @Component({
-  selector: 'app-worldwide-today',
-  templateUrl: './worldwide-today.component.html',
-  styleUrls: ['./worldwide-today.component.css']
+  selector: 'app-today',
+  templateUrl: './today.component.html',
+  styleUrls: ['./today.component.css']
 })
 
-export class WorldwideTodayComponent implements OnInit {
+export class TodayComponent implements OnInit {
 
   newlyConfirmed:number;
   newlyRecovered:number;

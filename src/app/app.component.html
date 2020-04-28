@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row" id="header">
     <div class="col centered">
-      <img id="logo" src="../assets/covid-logo.png">
+      <a href="/">
+          <img id="logo" src="../assets/covid-logo.png">
+      </a>
     </div>
   </div>
   <div class="row stack" >
@@ -9,7 +11,7 @@
     <p class="wwToday">{{ today | date: 'fullDate'  }}</p>
   </div>
   <div class="row">
-    <app-worldwide-today class="col-12"></app-worldwide-today>
+    <app-today class="col-12"></app-today>
   </div>
   <div class="row" >
       <h3 class="col centered" id="bold">Worldwide Totals</h3>
