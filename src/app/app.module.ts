@@ -2,9 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CountUpModule } from 'ngx-countup';
 import { HttpClientModule } from '@angular/common/http'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { FormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,9 +22,9 @@ import { TotalsComponent } from './components/totals/totals.component';
     CountUpModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatAutocompleteModule
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyA-tplYUJR6hdXWDG-6nTFhEM3ijDBvgZw"
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

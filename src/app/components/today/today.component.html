@@ -1,18 +1,21 @@
 <div class="row">
     <div class="col-4">
         <div class="customCard">
+            <hr id="newlyConfirmedLine">
             <h4 class="centered" id="cardTitle">Newly Confirmed</h4>
             <p class="centered" [countUp]="newlyConfirmed" id="newlyConfirmed"></p>
         </div>
     </div>
     <div class="col-4">
         <div class="customCard">
+            <hr id="newlyRecoveredLine">
             <h4 class="centered" id="cardTitle">Newly Recovered</h4>
             <p class="centered" [countUp]="newlyRecovered" id="newlyRecovered"></p>
         </div>
     </div>
     <div class="col-4">
         <div class="customCard">
+            <hr id="newDeathsLine">
             <h4 class="centered" id="cardTitle">New Deaths</h4>
             <p class="centered" [countUp]="newDeaths" id="newDeaths"></p>
         </div>

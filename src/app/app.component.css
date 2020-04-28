@@ -25,11 +25,36 @@
 
 #header {
     position: sticky;
-    top: 0;
+    top: 0;    
+    z-index: 999;
+    background: white;
 }
 
 #byCountryTitle {
     font-weight: bold;
 }
 
+#search {
+    border: 0.05em solid black;
+}
+
+.dropdown {
+    position: relative;
+    width: 100%;
+    height: 10em;
+    background: #F6F6F6;
+}
+
+agm-map {
+    height: 400px;
+}
+
+.container {
+    min-width: 100%;
+}
+
+.special {
+    margin-left: 4em;
+    margin-right: 4em;
+}
 

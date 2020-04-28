@@ -6,23 +6,29 @@
       </a>
     </div>
   </div>
-  <div class="row stack" >
+  <div class="row stack special" >
     <h3 class="wwToday" id="bold">Worldwide Today</h3>
     <p class="wwToday">{{ today | date: 'fullDate'  }}</p>
   </div>
-  <div class="row">
+  <div class="row special">
     <app-today class="col-12"></app-today>
   </div>
-  <div class="row" >
+  <div class="row special" >
       <h3 class="col centered" id="bold">Worldwide Totals</h3>
   </div>
-  <div class="row">
+  <div class="row special">
     <app-totals class="col-12"></app-totals>
   </div>
-  <div>
-    <h3 class="centered" id="byCountryTitle">By Country</h3>
-    <input placeholder="Search country" [(ngModel)]="searchCountry">
-    <!--map-->
-    <!--country-->
+  <div class="row special">
+    <h3 class="col centered" id="byCountryTitle">By Country</h3>
+  </div>
+  <div class="row special">
+    <div class="col-6 centered">
+      <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="chooseLocation($event)">
+        <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen"></agm-marker>
+      </agm-map>
+    </div>
+    <div class="col-6 centered">
+    </div>
   </div>
 </div>

@@ -26,3 +26,24 @@
 #cardTitle {
     padding-top: 0.5em;
 }
+
+#totalConfirmedLine {
+    border: 0.5em solid hsl(240, 100%, 37%);
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    margin-bottom: 0;
+}
+
+#totalRecoveredLine {
+    border: 0.5em solid #20e47d;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    margin-bottom: 0;
+}
+
+#totalDeathsLine {
+    border: 0.5em solid #ff6363;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    margin-bottom: 0;
+}

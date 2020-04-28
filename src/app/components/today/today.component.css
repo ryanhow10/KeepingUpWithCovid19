@@ -14,7 +14,7 @@
 
 #newDeaths {
     font-size: 1.25em;
-    color: #ff6363
+    color: #ff6363;
 }
 
 .customCard {
@@ -25,5 +25,26 @@
 
 #cardTitle {
     padding-top: 0.5em;
+}
+
+#newlyConfirmedLine {
+    border: 0.5em solid hsl(240, 100%, 37%);
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    margin-bottom: 0;
+}
+
+#newlyRecoveredLine {
+    border: 0.5em solid #20e47d;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    margin-bottom: 0;
+}
+
+#newDeathsLine {
+    border: 0.5em solid #ff6363;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    margin-bottom: 0;
 }
   
