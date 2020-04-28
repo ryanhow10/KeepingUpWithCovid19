@@ -23,12 +23,18 @@
     <h3 class="col centered" id="byCountryTitle">By Country</h3>
   </div>
   <div class="row special">
-    <div class="col-6 centered">
+    <div class="col centered">
       <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="chooseLocation($event)">
         <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen"></agm-marker>
       </agm-map>
     </div>
-    <div class="col-6 centered">
+    <div class="col centered">
+      <div class="row special">
+        <app-chart class="col centered" [title]="dailyCountryTotals" [labels]="labels" [data]="countryTodayData"></app-chart>
+      </div>
+      <div class="row special">
+        <app-totals-chart class="col centered" [title]="countryTotals" [labels]="labels" [data]="countryTotalData"></app-totals-chart>
+      </div>
     </div>
   </div>
 </div>

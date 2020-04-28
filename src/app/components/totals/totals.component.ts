@@ -15,11 +15,11 @@ export class TotalsComponent implements OnInit {
   constructor(private totalsService:TotalsService) { }
 
   ngOnInit(): void {
-    this.totalsService.getSummary().subscribe(resp => {
-      this.totalConfirmed = resp["Global"].TotalConfirmed;
-      this.totalRecovered = resp["Global"].TotalRecovered;
-      this.totalDeaths = resp["Global"].TotalDeaths;
-    })
+    // this.totalsService.getSummary().subscribe(resp => {
+    //   this.totalConfirmed = resp["Global"].TotalConfirmed;
+    //   this.totalRecovered = resp["Global"].TotalRecovered;
+    //   this.totalDeaths = resp["Global"].TotalDeaths;
+    // });
   }
 
 }

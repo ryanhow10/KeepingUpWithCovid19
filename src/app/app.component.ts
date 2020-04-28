@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryService } from './services/country.service';
+import { TodayService } from './services/today.service';
 import { Country } from './models/Country';
 
 @Component({
@@ -15,8 +16,13 @@ export class AppComponent implements OnInit{
   locationChosen:boolean = false;
   latitude:number = 43.651070;
   longitude:number = -79.347015;
+  labels:string[] = ["Confirmed", "Recovered", "Deaths"];
+  countryTodayData:number[] = [];
+  countryTotalData:number[] = [];
+  dailyCountryTotals:string = "Daily Totals";
+  countryTotals:string = "Country Totals";
 
-  constructor(private countryService:CountryService) {
+  constructor(private countryService:CountryService, private todayService:TodayService) {
   }
 
   ngOnInit() {
@@ -38,6 +44,22 @@ export class AppComponent implements OnInit{
     this.countryService.getCountryCode(lat, lng).subscribe(resp => {
       this.countryName = resp["countryName"];
       this.countryCode = resp["countryCode"];
+      this.setCountryTodoData(this.countryCode, this.countryName);
+    });
+  }
+
+  setCountryTodoData(countryCode:string, countryName:string) {
+    this.todayService.getSummary().subscribe(resp => {
+      resp["Countries"].forEach(country => {
+        if(country.CountryCode == countryCode && country.Country == countryName){
+          this.countryTodayData.push(country.NewConfirmed);
+          this.countryTodayData.push(country.NewRecovered);
+          this.countryTodayData.push(country.NewDeaths);
+          this.countryTotalData.push(country.TotalConfirmed);
+          this.countryTotalData.push(country.TotalRecovered);
+          this.countryTotalData.push(country.TotalDeaths);
+        }
+      })
     });
   }
 }

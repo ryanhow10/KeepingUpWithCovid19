@@ -16,11 +16,11 @@ export class TodayComponent implements OnInit {
   constructor(private todayService:TodayService) { }
 
   ngOnInit(): void {
-    this.todayService.getSummary().subscribe(resp => {
-      this.newlyConfirmed = resp["Global"].NewConfirmed;
-      this.newlyRecovered = resp["Global"].NewRecovered;
-      this.newDeaths = resp["Global"].NewDeaths;
-    })
+    // this.todayService.getSummary().subscribe(resp => {
+    //   this.newlyConfirmed = resp["Global"].NewConfirmed;
+    //   this.newlyRecovered = resp["Global"].NewRecovered;
+    //   this.newDeaths = resp["Global"].NewDeaths;
+    // });
   }
 
 
