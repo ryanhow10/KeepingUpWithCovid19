@@ -1,7 +1,24 @@
 <div class="container">
-  <div class="row">
+  <div class="row" id="header">
     <div class="col centered">
       <img id="logo" src="../assets/covid-logo.png">
     </div>
+  </div>
+  <div class="row stack" >
+    <h3 class="wwToday" id="bold">Worldwide Today</h3>
+    <p class="wwToday">{{ today | date: 'fullDate'  }}</p>
+  </div>
+  <div class="row">
+    <app-worldwide-today class="col-12"></app-worldwide-today>
+  </div>
+  <div class="row" >
+      <h3 class="col centered" id="bold">Worldwide Totals</h3>
+  </div>
+  <div class="row">
+    <app-totals class="col-12"></app-totals>
+  </div>
+  <div>
+    <!--map-->
+    <!--country-->
   </div>
 </div>

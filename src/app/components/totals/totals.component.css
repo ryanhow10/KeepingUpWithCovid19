@@ -2,17 +2,17 @@
     text-align: center;
 }
 
-#newlyConfirmed {
+#totalConfirmed {
     font-size: 1.25em;
-    color: hsl(240, 100%, 37%);
-}
+    color: #0000bb;
+}   
 
-#newlyRecovered {
+#totalRecovered {
     font-size: 1.25em;
     color: #20e47d;
 }
 
-#newDeaths {
+#totalDeaths {
     font-size: 1.25em;
     color: #ff6363
 }
@@ -26,4 +26,3 @@
 #cardTitle {
     padding-top: 0.5em;
 }
-  
