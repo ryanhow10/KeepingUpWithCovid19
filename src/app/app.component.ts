@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CountryService } from './services/country.service';
+import { Country } from './models/Country';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   today:Date = new Date();
+  countries:Country[];
+  searchCountry:string;
+
+  constructor(private countryService:CountryService) {}
+
+  ngOnInit() {
+    this.countryService.getCounties().subscribe(resp => {
+      this.countries = resp;
+    });
+  }
 }
