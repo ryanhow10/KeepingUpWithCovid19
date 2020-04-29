@@ -7,20 +7,21 @@
     </div>
   </div>
   <div class="row stack special" >
-    <h3 class="wwToday" id="bold">Worldwide Today</h3>
+    <h3 class="wwToday bold">Worldwide Today</h3>
     <p class="wwToday">{{ today | date: 'fullDate'  }}</p>
   </div>
   <div class="row special">
     <app-today class="col-12"></app-today>
   </div>
   <div class="row special" >
-      <h3 class="col centered" id="bold">Worldwide Totals</h3>
+      <h3 class="col centered bold" id="wwTotals">Worldwide Totals</h3>
   </div>
   <div class="row special">
     <app-totals class="col-12"></app-totals>
   </div>
-  <div class="row special">
-    <h3 class="col centered" id="byCountryTitle">By Country</h3>
+  <div class="row stack special">
+    <h3 class="bold" id="selectCountry">By Country</h3>
+    <p id="selectCountry" *ngIf="!countrySelected">Mark a country to view statistics or <a id="current" (click)="setToCurrentLocation()">use current location!</a></p>
   </div>
   <div class="row special">
     <div class="col centered">
@@ -28,12 +29,12 @@
         <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen"></agm-marker>
       </agm-map>
     </div>
-    <div class="col centered">
-      <div class="row special">
-        <app-chart class="col centered" [title]="dailyCountryTotals" [labels]="labels" [data]="countryTodayData"></app-chart>
+    <div class="col centered" *ngIf="countrySelected">
+      <div class="row">
+        <app-chart class="col centered" [title]="dailyCountryTotals" [country]="countryName" [labels]="labels" [(data)]="countryTodayData"></app-chart>
       </div>
-      <div class="row special">
-        <app-totals-chart class="col centered" [title]="countryTotals" [labels]="labels" [data]="countryTotalData"></app-totals-chart>
+      <div class="row">
+        <app-totals-chart class="col centered" [title]="countryTotals" [country]="countryName" [labels]="labels" [(data)]="countryTotalData"></app-totals-chart>
       </div>
     </div>
   </div>

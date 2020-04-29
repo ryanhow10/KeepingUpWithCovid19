@@ -10,6 +10,7 @@ export class ChartComponent implements OnInit {
   @Input() labels:string[];
   @Input() data:number[];
   @Input() title:string;
+  @Input() country:string;
 
   constructor() { }
 
@@ -44,7 +45,7 @@ export class ChartComponent implements OnInit {
           hover: true,
           title: {
             display: true,
-            text: this.title
+            text: this.country + " " + this.title
           },
           legend: {
             display: false

@@ -11,6 +11,7 @@ export class TotalsChartComponent implements OnInit {
   @Input() labels:string[];
   @Input() data:number[];
   @Input() title:string;
+  @Input() country:string;
 
   constructor() { }
 
@@ -45,7 +46,7 @@ export class TotalsChartComponent implements OnInit {
           hover: true,
           title: {
             display: true,
-            text: this.title
+            text: this.country + " " + this.title
           },
           legend: {
             display: false
