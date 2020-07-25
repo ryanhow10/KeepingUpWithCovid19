@@ -1,0 +1,5 @@
+<div class="customCard">
+    <hr [ngStyle]="getCardLineStyle()">
+    <h4 class="centered" id="cardTitle">{{ title.get(type) }}</h4>
+    <p class="centered" [countUp]="count" [ngStyle]="getCardStyle()"></p>
+</div>

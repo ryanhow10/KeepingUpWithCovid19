@@ -1,0 +1,13 @@
+.centered {
+    text-align: center;
+}
+
+#cardTitle {
+    padding-top: 0.5em;
+}
+
+.customCard {
+    background: white;
+    border-radius: 0.5em;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}

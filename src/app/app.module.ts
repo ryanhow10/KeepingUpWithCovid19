@@ -11,6 +11,7 @@ import { TodayComponent } from './components/today/today.component';
 import { TotalsComponent } from './components/totals/totals.component';
 import { ChartComponent } from './components/chart/chart.component';
 import { TotalsChartComponent } from './components/totals-chart/totals-chart.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TotalsChartComponent } from './components/totals-chart/totals-chart.com
     TodayComponent,
     TotalsComponent,
     ChartComponent,
-    TotalsChartComponent
+    TotalsChartComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,7 @@ import { TotalsChartComponent } from './components/totals-chart/totals-chart.com
     HttpClientModule,
     FormsModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyA-tplYUJR6hdXWDG-6nTFhEM3ijDBvgZw"
+      apiKey: ""
     })
   ],
   providers: [],
