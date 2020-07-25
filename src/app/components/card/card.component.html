@@ -1,5 +1,6 @@
 <div class="customCard">
     <hr [ngStyle]="getCardLineStyle()">
-    <h4 class="centered" id="cardTitle">{{ title.get(type) }}</h4>
+    <h4 *ngIf="type === 'deaths'" class="centered" id="cardTitle">{{ today ? 'New ' + title.get(type) : title.get(type) }}</h4>
+    <h4 *ngIf="type !== 'deaths'" class="centered" id="cardTitle">{{ today ? 'Newly ' + title.get(type) : title.get(type) }}</h4>
     <p class="centered" [countUp]="count" [ngStyle]="getCardStyle()"></p>
 </div>

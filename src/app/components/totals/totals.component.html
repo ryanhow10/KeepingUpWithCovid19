@@ -1,24 +1,12 @@
 <div class="row">
     <div class="col-4">
-        <div class="customCard">
-            <hr id="totalConfirmedLine">
-            <h4 class="centered" id="cardTitle">Confirmed</h4>
-            <p class="centered" [countUp]="totalConfirmed" id="totalConfirmed"></p>
-        </div>
+        <app-card [type]="'confirmed'" [count]="totalConfirmed"></app-card>
     </div>
     <div class="col-4">
-        <div class="customCard">
-            <hr id="totalRecoveredLine">
-            <h4 class="centered" id="cardTitle">Recovered</h4>
-            <p class="centered" [countUp]="totalRecovered" id="totalRecovered"></p>
-        </div>
+        <app-card [type]="'recovered'" [count]="totalRecovered"></app-card>
     </div>
     <div class="col-4">
-        <div class="customCard">
-            <hr id="totalDeathsLine">
-            <h4 class="centered" id="cardTitle">Deaths</h4>
-            <p class="centered" [countUp]="totalDeaths" id="totalDeaths"></p>
-        </div>
+        <app-card [type]="'deaths'" [count]="totalDeaths"></app-card>
     </div>
 </div>
     

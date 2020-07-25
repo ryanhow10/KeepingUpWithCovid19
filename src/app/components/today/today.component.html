@@ -1,11 +1,11 @@
 <div class="row">
     <div class="col-4">
-        <app-card [type]="'newlyConfirmed'" [count]="newlyConfirmed"></app-card>
+        <app-card [today]="true" [type]="'confirmed'" [count]="newlyConfirmed"></app-card>
     </div>
     <div class="col-4">
-        <app-card [type]="'newlyRecovered'" [count]="newlyRecovered"></app-card>
+        <app-card [today]="true" [type]="'recovered'" [count]="newlyRecovered"></app-card>
     </div>
     <div class="col-4">
-        <app-card [type]="'newDeaths'" [count]="newDeaths"></app-card>
+        <app-card [today]="true" [type]="'deaths'" [count]="newDeaths"></app-card>
     </div>
 </div>

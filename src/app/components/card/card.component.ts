@@ -7,12 +7,13 @@ import { maroon } from 'color-name';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
+  @Input() today: boolean = false;
   @Input() type: string;
   @Input() count: number;
   title: Map<string, string> = new Map([
-    ['newlyConfirmed', 'Newly Confirmed'],
-    ['newlyRecovered', 'Newly Recovered'],
-    ['newDeaths', 'New Deaths']
+    ['confirmed', 'Confirmed'],
+    ['recovered', 'Recovered'],
+    ['deaths', 'Deaths']
   ]);
   colors: object = {
     blue: 'hsl(240, 100%, 37%)',
@@ -31,13 +32,13 @@ export class CardComponent implements OnInit {
       'font-size': '1.25em'
     };
     switch (this.type) {
-      case 'newlyConfirmed':
+      case 'confirmed':
         classStyle['color'] = this.colors['blue'];
         break;
-      case 'newlyRecovered':
+      case 'recovered':
         classStyle['color'] = this.colors['green'];
         break;
-      case 'newDeaths':
+      case 'deaths':
         classStyle['color'] = this.colors['red'];
         break;
     }
@@ -51,13 +52,13 @@ export class CardComponent implements OnInit {
       'margin-bottom': '0'
     };
     switch (this.type) {
-      case 'newlyConfirmed':
+      case 'confirmed':
         classStyle['border'] = '0.5em solid ' + this.colors['blue'];
         break;
-      case 'newlyRecovered':
+      case 'recovered':
         classStyle['border'] = '0.5em solid ' + this.colors['green'];
         break;
-      case 'newDeaths':
+      case 'deaths':
         classStyle['border'] = '0.5em solid ' + this.colors['red'];
         break;
     }
